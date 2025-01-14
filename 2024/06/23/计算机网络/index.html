@@ -15,7 +15,16 @@
 
 DHT( 分布式哈希表)
 
-">
+可靠数据传输
+不出错，不重复，不失序
+
+rdt1  下层数据可靠只做封装，解封装
+
+rdt2 下层数据存在出错
+
+加入校验机制
+
+接收方若发现出错，发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -408,7 +417,7 @@ DHT( 分布式哈希表)
             <div id="articleContent">
                 <h1 id="P2P"><a href="#P2P" class="headerlink" title="P2P"></a>P2P</h1><p>非结构化</p>
 <ul>
-<li>集中式目录<img src="/../images%5Cimage-20250114171651596.png" alt="集中式目录"></li>
+<li>集中式目录<img src="/../images/image-20250114171651596.png" alt="集中式目录"></li>
 <li>分布式目录<img src="/../images/image-20250114171711885.png" alt="分布式目录"></li>
 <li>混合式<img src="/../images/image-20250114171759177.png" alt="混合体"></li>
 </ul>
@@ -416,7 +425,46 @@ DHT( 分布式哈希表)
 <ul>
 <li>DHT( 分布式哈希表)</li>
 </ul>
+<h1 id="可靠数据传输"><a href="#可靠数据传输" class="headerlink" title="可靠数据传输"></a>可靠数据传输</h1><blockquote>
+<p>不出错，不重复，不失序</p>
+</blockquote>
+<h2 id="rdt1-下层数据可靠"><a href="#rdt1-下层数据可靠" class="headerlink" title="rdt1  下层数据可靠"></a>rdt1  下层数据可靠</h2><p>只做封装，解封装</p>
+<p><img src="/./../images/image-20250114190728680.png" alt="image-20250114190728680"></p>
+<h2 id="rdt2-下层数据存在出错"><a href="#rdt2-下层数据存在出错" class="headerlink" title="rdt2 下层数据存在出错"></a>rdt2 下层数据存在出错</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=416090103&bvid=BV1JV411t7ow&cid=279024161&p=26" scrolling="yes" border="0" frameborder="yes" framespacing="0" allowfullscreen="true" width="800" 
+  height="450" ></iframe>
 
+<p><strong>加入校验机制</strong><img src="/./../images/image-20250114190923471.png" alt="image-20250114190923471"></p>
+<ul>
+<li><p>接收方若发现出错，发送NAK，</p>
+</li>
+<li><p>正常则发送ACK</p>
+<ul>
+<li>NAK,ACk可能出错<ul>
+<li>引入序号机制，为数据编号</li>
+<li>若无法解析ack&#x2F;nck，发送旧消息<img src="/./../images/image-20250114191457475.png" alt="image-20250114191457475"><img src="/./../images/image-20250114191608472.png" alt="image-20250114191608472"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>发送方根据反馈发送数据</p>
+</li>
+</ul>
+<h3 id="rdt2-2"><a href="#rdt2-2" class="headerlink" title="rdt2.2"></a>rdt2.2</h3><p>使用ack 代替nak</p>
+<p><img src="/./../images/image-20250114192201585.png" alt="image-20250114192201585"></p>
+<h2 id="rdt3-下层信道存在数据丢失和错误"><a href="#rdt3-下层信道存在数据丢失和错误" class="headerlink" title="rdt3 下层信道存在数据丢失和错误"></a>rdt3 下层信道存在数据丢失和错误</h2><h2 id="rdt-3-0"><a href="#rdt-3-0" class="headerlink" title="rdt 3.0"></a>rdt 3.0</h2><p>引入超时重传机制</p>
+<p>若长时间没有收到消息，则将数据重新发送一次</p>
+<p>若时间波动比较大，可根据网络情况动态的设置计时器</p>
+<p>缺点：信道利用率低</p>
+<h2 id="rdt-3-1"><a href="#rdt-3-1" class="headerlink" title="rdt 3.1"></a>rdt 3.1</h2><p>将停止等待协议改为pipeline协议</p>
+<p><img src="/./../images/image-20250114193835038.png" alt="image-20250114193835038"></p>
+<h3 id="发送窗口"><a href="#发送窗口" class="headerlink" title="发送窗口"></a>发送窗口</h3><p>加入发送缓冲区，把发送但未经确认的数据加入其中，便于重发</p>
+<p><img src="/./../images/image-20250114194833983.png" alt="image-20250114194833983"></p>
+<p>前沿和后沿不能超过缓冲区大小</p>
+<h3 id="接受窗口"><a href="#接受窗口" class="headerlink" title="接受窗口"></a>接受窗口</h3><p>类似发送窗口，只能接受缓冲区内的分组，且大小固定</p>
+<blockquote>
+<p>参考滑动窗口</p>
+</blockquote>
+<h3 id="回退N步"><a href="#回退N步" class="headerlink" title="回退N步"></a>回退N步</h3><h3 id="选择重传"><a href="#选择重传" class="headerlink" title="选择重传"></a>选择重传</h3>
                 
             </div>
             <hr/>
