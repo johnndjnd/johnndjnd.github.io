@@ -1427,32 +1427,32 @@ kernel 在文件系统启动时读取s">
 <li>Network layer</li>
 <li>Link layer</li>
 </ul>
-<p><img src="/./../images/image-20250104211256696-1736866016800-1.png" alt="image20250104211256696"></p>
-<h2 id="Link-layer"><a href="#Link-layer" class="headerlink" title="Link layer"></a>Link layer</h2><p><img src="/./../images/image-20250104213211334-1736866016800-2.png" alt="image20250104213211334"></p>
-<p><img src="/./../images/image-20250104213228259-1736866016800-3.png" alt="image20250104213228259"></p>
+<p><img src="/./../images/image-20250104211256696-1736866016800-1.png" alt="image20250104211256696"></p>
+<h2 id="Link-layer"><a href="#Link-layer" class="headerlink" title="Link layer"></a>Link layer</h2><p><img src="/./../images/image-20250104213211334-1736866016800-2.png" alt="image20250104213211334"></p>
+<p><img src="/./../images/image-20250104213228259-1736866016800-3.png" alt="image20250104213228259"></p>
 <p><strong>提高速度</strong>：并行传输：一次传递多个bit</p>
-<p><img src="/./../images/image-20250104213339507-1736866016800-4.png" alt="image20250104213339507"></p>
-<p>但并行有缺点：受最慢的数据影响，不如串行：<img src="/./../images/image-20250104213647666-1736866016801-5.png" alt="image20250104213647666"></p>
+<p><img src="/./../images/image-20250104213339507-1736866016800-4.png" alt="image20250104213339507"></p>
+<p>但并行有缺点：受最慢的数据影响，不如串行：<img src="/./../images/image-20250104213647666-1736866016801-5.png" alt="image20250104213647666"></p>
 <p>但只传数据不传时钟会导致波形变形，所以需要压控振荡器：</p>
-<p><img src="/./../images/image-20250104214012288-1736866016801-6.png" alt="image20250104214012288"></p>
+<p><img src="/./../images/image-20250104214012288-1736866016801-6.png" alt="image20250104214012288"></p>
 <p>如何区分一长串的0或1：</p>
-<h3 id="Manchester-Code"><a href="#Manchester-Code" class="headerlink" title="Manchester Code"></a>Manchester Code</h3><p><img src="/./../images/image-20250104214512966-1736866016801-7.png" alt="image20250104214512966"></p>
-<h3 id="分时复用："><a href="#分时复用：" class="headerlink" title="分时复用："></a>分时复用：</h3><p>最多703个人通话：45M&#x2F;8&#x2F;8&#x3D;703</p>
+<h3 id="Manchester-Code"><a href="#Manchester-Code" class="headerlink" title="Manchester Code"></a>Manchester Code</h3><p><img src="/./../images/image-20250104214512966-1736866016801-7.png" alt="image20250104214512966"></p>
+<h3 id="分时复用："><a href="#分时复用：" class="headerlink" title="分时复用："></a>分时复用：</h3><p>最多703个人通话：45M&#x2F;8&#x2F;8&#x3D;703</p>
 <p>发包太快来不及接受：丢包！</p>
-<h3 id="发送非固定大小的包"><a href="#发送非固定大小的包" class="headerlink" title="发送非固定大小的包"></a>发送非固定大小的包</h3><p><img src="/./../images/image-20250104221815565-1736866016801-8.png" alt="image20250104221815565"></p>
+<h3 id="发送非固定大小的包"><a href="#发送非固定大小的包" class="headerlink" title="发送非固定大小的包"></a>发送非固定大小的包</h3><p><img src="/./../images/image-20250104221815565-1736866016801-8.png" alt="image20250104221815565"></p>
 <p>如何判断一个包的开始：</p>
 <p>example：连续七个1：若数据存在连续7个1，在发送方6个1后加一个0，接受方再删除</p>
 <p>数据错误如何纠错：</p>
 <p>计算海明距离（二进制值不同的数量（001和101为1））</p>
-<p><img src="/./../images/image-20250104222228598-1736866016801-9.png" alt="image20250104222228598"></p>
+<p><img src="/./../images/image-20250104222228598-1736866016801-9.png" alt="image20250104222228598"></p>
 <p><strong>海明编码</strong></p>
 <p>将每四位数据填充为7位：</p>
-<p><img src="/./../images/image-20250104223506791-1736866016801-10.png" alt="image20250104223506791"></p>
-<p><img src="/./../images/image-20250104223541868-1736866016801-11.png" alt="image20250104223541868"></p>
+<p><img src="/./../images/image-20250104223506791-1736866016801-10.png" alt="image20250104223506791"></p>
+<p><img src="/./../images/image-20250104223541868-1736866016801-11.png" alt="image20250104223541868"></p>
 <h2 id="Network-layer"><a href="#Network-layer" class="headerlink" title="Network layer"></a>Network layer</h2><p>IP :Best-afford network</p>
-<p><img src="/./../images/image-20250104224339619-1736866016801-12.png" alt="image20250104224339619"></p>
+<p><img src="/./../images/image-20250104224339619-1736866016801-12.png" alt="image20250104224339619"></p>
 <h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><p>简单的路由表：不同区间发送到不同路由</p>
-<p><img src="/./../images/image-20250104224626315-1736866016801-13.png" alt="image20250104224626315"></p>
+<p><img src="/./../images/image-20250104224626315-1736866016801-13.png" alt="image20250104224626315"></p>
 <p><strong>如何构建一个路由表</strong></p>
 <h4 id="control-plane"><a href="#control-plane" class="headerlink" title="control-plane"></a>control-plane</h4><p>路由表的目标：见ppt</p>
 <p>建立步骤：</p>
@@ -1469,7 +1469,7 @@ kernel 在文件系统启动时读取s">
 <li>via flooding(泛洪，广播给所有节点)</li>
 <li>使用dijkstra算法构建图</li>
 <li><strong>具体算法看ppt</strong></li>
-<li><img src="/./../images/image-20250105000332554-1736866016801-14.png" alt="image20250105000332554"></li>
+<li><img src="/./../images/image-20250105000332554-1736866016801-14.png" alt="image20250105000332554"></li>
 </ul>
 </li>
 <li><p>distance-vector</p>
@@ -1480,37 +1480,37 @@ kernel 在文件系统启动时读取s">
 </li>
 <li><p>问题及修复</p>
 <ul>
-<li><p><img src="/./../images/image-20250104235923765-1736866016801-15.png" alt="image20250104235923765">此时bc断掉后，a会发给b到c的距离是2，b-&gt;c 更新为3，往复，距离会越来越大<img src="/./../images/image-20250105000102357-1736866016801-16.png" alt="image20250105000102357"></p>
+<li><p><img src="/./../images/image-20250104235923765-1736866016801-15.png" alt="image20250104235923765">此时bc断掉后，a会发给b到c的距离是2，b-&gt;c 更新为3，往复，距离会越来越大<img src="/./../images/image-20250105000102357-1736866016801-16.png" alt="image20250105000102357"></p>
 </li>
-<li><p>修复：从一端得到的信息不能再发送回去<img src="/./../images/image-20250105000216393-1736866016801-17.png" alt="image20250105000216393"></p>
-</li>
-</ul>
-</li>
-<li><p><img src="/./../images/image-20250105000427039-1736866016801-18.png" alt="image20250105000427039"></p>
+<li><p>修复：从一端得到的信息不能再发送回去<img src="/./../images/image-20250105000216393-1736866016801-17.png" alt="image20250105000216393"></p>
 </li>
 </ul>
 </li>
+<li><p><img src="/./../images/image-20250105000427039-1736866016801-18.png" alt="image20250105000427039"></p>
+</li>
 </ul>
-<h5 id="实现路由表的方式："><a href="#实现路由表的方式：" class="headerlink" title="实现路由表的方式："></a>实现路由表的方式：</h5><h6 id="path-vector"><a href="#path-vector" class="headerlink" title="path vector"></a>path vector</h6><p>几个path vector的问题：</p>
-<p><img src="/./../images/image-20250105084254267-1736866016801-19.png" alt="image20250105084254267"></p>
-<h6 id="分层（hierarchical）"><a href="#分层（hierarchical）" class="headerlink" title="分层（hierarchical）"></a>分层（hierarchical）</h6><p><img src="/./../images/image-20250105084535985-1736866016801-20.png" alt="image20250105084535985"></p>
-<p><img src="/./../images/image-20250105085002123-1736866016801-21.png" alt="image20250105085002123"></p>
+</li>
+</ul>
+<h5 id="实现路由表的方式："><a href="#实现路由表的方式：" class="headerlink" title="实现路由表的方式："></a>实现路由表的方式：</h5><h6 id="path-vector"><a href="#path-vector" class="headerlink" title="path vector"></a>path vector</h6><p>几个path vector的问题：</p>
+<p><img src="/./../images/image-20250105084254267-1736866016801-19.png" alt="image20250105084254267"></p>
+<h6 id="分层（hierarchical）"><a href="#分层（hierarchical）" class="headerlink" title="分层（hierarchical）"></a>分层（hierarchical）</h6><p><img src="/./../images/image-20250105084535985-1736866016801-20.png" alt="image20250105084535985"></p>
+<p><img src="/./../images/image-20250105085002123-1736866016801-21.png" alt="image20250105085002123"></p>
 <h6 id="topological-addressing"><a href="#topological-addressing" class="headerlink" title="topological addressing"></a>topological addressing</h6><p>将多条路由表压缩为一条</p>
-<p><img src="/./../images/image-20250105090601575-1736866016801-22.png" alt="image20250105090601575"></p>
-<h4 id="data-plain"><a href="#data-plain" class="headerlink" title="data-plain"></a>data-plain</h4><p><img src="/./../images/image-20250105091350069-1736866016801-23.png" alt="image20250105091350069"></p>
-<p><img src="/./../images/image-20250105091541190-1736866016801-24.png" alt="image20250105091541190"></p>
+<p><img src="/./../images/image-20250105090601575-1736866016801-22.png" alt="image20250105090601575"></p>
+<h4 id="data-plain"><a href="#data-plain" class="headerlink" title="data-plain"></a>data-plain</h4><p><img src="/./../images/image-20250105091350069-1736866016801-23.png" alt="image20250105091350069"></p>
+<p><img src="/./../images/image-20250105091541190-1736866016801-24.png" alt="image20250105091541190"></p>
 <h4 id="NAT-网络地址翻译"><a href="#NAT-网络地址翻译" class="headerlink" title="NAT(网络地址翻译)"></a>NAT(网络地址翻译)</h4><p>缺点：破坏了分层（会使用end-to-end layer的port）</p>
-<p><img src="/./../images/image-20250105092550817-1736866016801-25.png" alt="image20250105092550817"></p>
+<p><img src="/./../images/image-20250105092550817-1736866016801-25.png" alt="image20250105092550817"></p>
 <h2 id="End-to-end-layer"><a href="#End-to-end-layer" class="headerlink" title="End-to-end layer"></a>End-to-end layer</h2><h3 id="Ethernet-以太网"><a href="#Ethernet-以太网" class="headerlink" title="Ethernet(以太网)"></a>Ethernet(以太网)</h3><h4 id="hub"><a href="#hub" class="headerlink" title="hub"></a>hub</h4><p>采用广播方式传播给所有人，非接收方ignore</p>
 <p>mac地址可能重叠</p>
-<p><img src="/./../images/image-20250105094905991-1736866016801-26.png" alt="image20250105094905991"></p>
+<p><img src="/./../images/image-20250105094905991-1736866016801-26.png" alt="image20250105094905991"></p>
 <p>发送给E流程（数字是mac,字母是ip）：</p>
 <ul>
 <li>首先mac:19,ip:E</li>
 <li>k接受后，将mac改为15,从4号口转发出去</li>
 <li>路由表记录E</li>
 </ul>
-<p><img src="/./../images/image-20250105095335071-1736866016801-27.png" alt="image20250105095335071"></p>
+<p><img src="/./../images/image-20250105095335071-1736866016801-27.png" alt="image20250105095335071"></p>
 <p>一个新接入的设备如何获取mac：ARP协议（）</p>
 <ul>
 <li>发消息前先广播询问</li>
@@ -1522,14 +1522,14 @@ kernel 在文件系统启动时读取s">
 <h4 id="ARP-攻击"><a href="#ARP-攻击" class="headerlink" title="ARP 攻击"></a>ARP 攻击</h4><p>攻击者发送自己的mac，使得其他机器将数据发给自己</p>
 <p>无法阻止</p>
 <p>由相应机构监听检测</p>
-<h4 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h4><p><img src="/./../images/image-20250105101810230-1736866016801-28.png" alt="image20250105101810230"></p>
+<h4 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h4><p><img src="/./../images/image-20250105101810230-1736866016801-28.png" alt="image20250105101810230"></p>
 <h3 id="保证at-list-once"><a href="#保证at-list-once" class="headerlink" title="保证at-list-once"></a>保证at-list-once</h3><p>RTT:(round trip time):to_time+process_time+back_time</p>
 <p>设置超时重传时间：根据RTT设置时间</p>
 <p>不要使用固定时间（fixed time is evil)</p>
 <ul>
 <li>使用adapted time</li>
 </ul>
-<p> <strong>现在的做法</strong><img src="/./../images/image-20250105102838784-1736866016801-29.png" alt="image20250105102838784"></p>
+<p> <strong>现在的做法</strong><img src="/./../images/image-20250105102838784-1736866016801-29.png" alt="image20250105102838784"></p>
 <ul>
 <li>NAK<ul>
 <li>发送方没有timeout机制</li>
@@ -1550,7 +1550,7 @@ kernel 在文件系统启动时读取s">
 </li>
 <li><p>容忍重传，保证幂等性</p>
 </li>
-<li><p><img src="/./../images/image-20250105104230572-1736866016801-30.png" alt="image20250105104230572"></p>
+<li><p><img src="/./../images/image-20250105104230572-1736866016801-30.png" alt="image20250105104230572"></p>
 </li>
 </ul>
 <h3 id="保证数据完整性"><a href="#保证数据完整性" class="headerlink" title="保证数据完整性"></a>保证数据完整性</h3><ul>
@@ -1558,9 +1558,9 @@ kernel 在文件系统启动时读取s">
 </ul>
 <h3 id="保证stream-order"><a href="#保证stream-order" class="headerlink" title="保证stream order"></a>保证stream order</h3><p>将大数据拆包，处理</p>
 <ul>
-<li><img src="/./../images/image-20250105104658798-1736866016801-31.png" alt="image20250105104658798"></li>
+<li><img src="/./../images/image-20250105104658798-1736866016801-31.png" alt="image20250105104658798"></li>
 </ul>
-<h3 id="抖动控制保证"><a href="#抖动控制保证" class="headerlink" title="抖动控制保证"></a>抖动控制保证</h3><p>数据包到达的时间间隔的不稳定性，通常表现为数据包到达时间的波动。尤其在实时通信和流媒体应用中（如VoIP、视频会议、在线游戏等），抖动的存在会影响数据的平滑传输，导致语音或视频质量下降、延迟增加等问题。因此，抖动控制是确保数据包在端到端传输中保持一致性的关键。<img src="/./../images/image-20250105105445078-1736866016801-32.png" alt="image20250105105445078"></p>
+<h3 id="抖动控制保证"><a href="#抖动控制保证" class="headerlink" title="抖动控制保证"></a>抖动控制保证</h3><p>数据包到达的时间间隔的不稳定性，通常表现为数据包到达时间的波动。尤其在实时通信和流媒体应用中（如VoIP、视频会议、在线游戏等），抖动的存在会影响数据的平滑传输，导致语音或视频质量下降、延迟增加等问题。因此，抖动控制是确保数据包在端到端传输中保持一致性的关键。<img src="/./../images/image-20250105105445078-1736866016801-32.png" alt="image20250105105445078"></p>
 <h4 id="端到端抖动控制的方法"><a href="#端到端抖动控制的方法" class="headerlink" title="端到端抖动控制的方法"></a>端到端抖动控制的方法</h4><ol>
 <li><strong>缓冲（Buffering）</strong></li>
 </ol>
@@ -1577,29 +1577,29 @@ kernel 在文件系统启动时读取s">
 <li><strong>自适应抖动缓冲（Adaptive Jitter Buffer）</strong>：使用更复杂的算法来不断评估抖动和延迟，并自适应地调整缓冲区的大小。例如，基于过去的抖动历史来预测未来的抖动并调整缓冲策略。</li>
 </ul>
 <h3 id="保证安全性"><a href="#保证安全性" class="headerlink" title="保证安全性"></a>保证安全性</h3><p>public key vs private key</p>
-<h3 id="性能保证"><a href="#性能保证" class="headerlink" title="性能保证"></a>性能保证</h3><p><img src="/./../images/image-20250105105842545-1736866016801-33.png" alt="image20250105105842545"></p>
+<h3 id="性能保证"><a href="#性能保证" class="headerlink" title="性能保证"></a>性能保证</h3><p><img src="/./../images/image-20250105105842545-1736866016801-33.png" alt="image20250105105842545"></p>
 <p>问题：发包太快怎么办</p>
 <ul>
-<li><p>每发几个包等待一下<img src="/./../images/image-20250105105927977-1736866016801-34.png" alt="image20250105105927977"></p>
+<li><p>每发几个包等待一下<img src="/./../images/image-20250105105927977-1736866016801-34.png" alt="image20250105105927977"></p>
 </li>
-<li><p>改进：不需要等待所有ack<img src="/./../images/image-20250105110125534-1736866016801-35.png" alt="image20250105110125534"></p>
+<li><p>改进：不需要等待所有ack<img src="/./../images/image-20250105110125534-1736866016801-35.png" alt="image20250105110125534"></p>
 </li>
 <li><p>丢包处理：超时重传，后续的发包暂停</p>
 </li>
 </ul>
-<p><img src="/./../images/image-20250105110343708-1736866016801-36.png" alt="image20250105110343708"></p>
+<p><img src="/./../images/image-20250105110343708-1736866016801-36.png" alt="image20250105110343708"></p>
 <ul>
 <li>选择合适的window size<ul>
 <li>大于rtt*瓶颈带宽<ul>
 <li>&#x3D;500*70ms&#x3D;35k</li>
 </ul>
 </li>
-<li><img src="/./../images/image-20250105110518879-1736866016801-37.png" alt="image20250105110518879"></li>
+<li><img src="/./../images/image-20250105110518879-1736866016801-37.png" alt="image20250105110518879"></li>
 </ul>
 </li>
 </ul>
 <h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p>congestion（拥塞）控制</p>
-<p><img src="/./../images/image-20250105111824932-1736866016801-38.png" alt="image20250105111824932"></p>
+<p><img src="/./../images/image-20250105111824932-1736866016801-38.png" alt="image20250105111824932"></p>
 <h3 id="慢启动-AIMD"><a href="#慢启动-AIMD" class="headerlink" title="慢启动(AIMD)"></a><strong>慢启动</strong>(AIMD)</h3><p><strong>AIMD（Additive Increase&#x2F;Multiplicative Decrease）</strong> 是一种常用于网络协议中的拥塞控制算法，特别是在 <strong>TCP（Transmission Control Protocol）</strong> 中，旨在调整数据发送速率，以避免网络拥塞并提高吞吐量。AIMD通过动态调整发送窗口大小来平衡网络利用率和避免过度拥塞。</p>
 <h4 id="AIMD-算法原理"><a href="#AIMD-算法原理" class="headerlink" title="AIMD 算法原理"></a>AIMD 算法原理</h4><p>AIMD算法通过两种策略来调节网络中的数据传输速率：</p>
 <ol>
@@ -1673,25 +1673,25 @@ kernel 在文件系统启动时读取s">
 <ul>
 <li>丢包：重新开始</li>
 </ul>
-<p><img src="/./../images/image-20250105140428583-1736866016801-39.png" alt="image20250105140428583"></p>
-<h3 id="公平性：AIMD也能保证："><a href="#公平性：AIMD也能保证：" class="headerlink" title="公平性：AIMD也能保证："></a>公平性：AIMD也能保证：</h3><p><img src="/./../images/image-20250105140729569-1736866016801-40.png" alt="image20250105140729569"></p>
-<h3 id="tcp缺点"><a href="#tcp缺点" class="headerlink" title="tcp缺点"></a>tcp缺点</h3><p><img src="/./../images/image-20250105140826240-1736866016801-41.png" alt="image20250105140826240"></p>
+<p><img src="/./../images/image-20250105140428583-1736866016801-39.png" alt="image20250105140428583"></p>
+<h3 id="公平性：AIMD也能保证："><a href="#公平性：AIMD也能保证：" class="headerlink" title="公平性：AIMD也能保证："></a>公平性：AIMD也能保证：</h3><p><img src="/./../images/image-20250105140729569-1736866016801-40.png" alt="image20250105140729569"></p>
+<h3 id="tcp缺点"><a href="#tcp缺点" class="headerlink" title="tcp缺点"></a>tcp缺点</h3><p><img src="/./../images/image-20250105140826240-1736866016801-41.png" alt="image20250105140826240"></p>
 <h2 id="DNS（domain-name-system）"><a href="#DNS（domain-name-system）" class="headerlink" title="DNS（domain name system）"></a>DNS（domain name system）</h2><p>为什么不能仅仅使用ip</p>
-<p><img src="/./../images/image-20250105141519800-1736866016801-42.png" alt="image20250105141519800"></p>
+<p><img src="/./../images/image-20250105141519800-1736866016801-42.png" alt="image20250105141519800"></p>
 <p>为什么需要DNS</p>
-<p><img src="/./../images/image-20250105141718581-1736866016801-43.png" alt="image20250105141718581"></p>
+<p><img src="/./../images/image-20250105141718581-1736866016801-43.png" alt="image20250105141718581"></p>
 <p>DNS:从后往前查找</p>
-<p><img src="/./../images/image-20250105142430321-1736866016801-44.png" alt="image20250105142430321"></p>
-<p><img src="/./../images/image-20250105142737871-1736866016801-45.png" alt="image20250105142737871"></p>
+<p><img src="/./../images/image-20250105142430321-1736866016801-44.png" alt="image20250105142430321"></p>
+<p><img src="/./../images/image-20250105142737871-1736866016801-45.png" alt="image20250105142737871"></p>
 <p>DNS访问过程：</p>
-<p><img src="/./../images/image-20250105143159208-1736866016801-46.png" alt="image20250105143159208"></p>
+<p><img src="/./../images/image-20250105143159208-1736866016801-46.png" alt="image20250105143159208"></p>
 <p>为了可靠性（防止root 服务器崩溃），低级DNS服务器需要caching</p>
-<p><img src="/./../images/image-20250105143721460-1736866016801-47.png" alt="image20250105143721460"></p>
-<p>备份：<img src="/./../images/image-20250105143735465-1736866016801-48.png" alt="image20250105143735465"></p>
+<p><img src="/./../images/image-20250105143721460-1736866016801-47.png" alt="image20250105143721460"></p>
+<p>备份：<img src="/./../images/image-20250105143735465-1736866016801-48.png" alt="image20250105143735465"></p>
 <p>hostname和filename对比</p>
-<p><img src="/./../images/image-20250105144041289-1736866016801-49.png" alt="image20250105144041289"></p>
-<h3 id="DNS优点"><a href="#DNS优点" class="headerlink" title="DNS优点"></a>DNS优点</h3><p><img src="/./../images/image-20250105144810258-1736866016801-50.png" alt="image20250105144810258"></p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p><img src="/./../images/image-20250105144848388-1736866016801-51.png" alt="image20250105144848388"></p>
+<p><img src="/./../images/image-20250105144041289-1736866016801-49.png" alt="image20250105144041289"></p>
+<h3 id="DNS优点"><a href="#DNS优点" class="headerlink" title="DNS优点"></a>DNS优点</h3><p><img src="/./../images/image-20250105144810258-1736866016801-50.png" alt="image20250105144810258"></p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p><img src="/./../images/image-20250105144848388-1736866016801-51.png" alt="image20250105144848388"></p>
 <h3 id="1-DNS缓存投毒（Cache-Poisoning）"><a href="#1-DNS缓存投毒（Cache-Poisoning）" class="headerlink" title="1. DNS缓存投毒（Cache Poisoning）"></a>1. <strong>DNS缓存投毒（Cache Poisoning）</strong></h3><p><strong>问题描述</strong>：DNS缓存投毒攻击是指攻击者向DNS服务器的缓存中注入恶意的DNS记录，使得用户请求的域名被指向恶意网站。通过这种方式，攻击者能够控制用户的流量，将其引导到伪造的、不安全的网站。</p>
 <p><strong>解决办法</strong>：</p>
 <ul>
@@ -1740,31 +1740,31 @@ kernel 在文件系统启动时读取s">
 <li><strong>使用可信的DNS解析服务</strong>：选择提供加密DNS服务的DNS解析商，确保查询过程的安全性。</li>
 </ul>
 <h2 id="Name-scheme"><a href="#Name-scheme" class="headerlink" title="Name scheme"></a>Name scheme</h2><p>检索，分享，隐藏，用户友好，indirection</p>
-<p><img src="/./../images/image-20250105150854006-1736866016801-52.png" alt="image20250105150854006"></p>
-<p><img src="/./../images/image-20250105152028746-1736866016801-53.png" alt="image20250105152028746"></p>
-<p><img src="/./../images/image-20250105152056058-1736866016801-54.png" alt="image20250105152056058"></p>
-<p><img src="/./../images/image-20250105152444768-1736866016801-55.png" alt="image20250105152444768"></p>
+<p><img src="/./../images/image-20250105150854006-1736866016801-52.png" alt="image20250105150854006"></p>
+<p><img src="/./../images/image-20250105152028746-1736866016801-53.png" alt="image20250105152028746"></p>
+<p><img src="/./../images/image-20250105152056058-1736866016801-54.png" alt="image20250105152056058"></p>
+<p><img src="/./../images/image-20250105152444768-1736866016801-55.png" alt="image20250105152444768"></p>
 <p>名字映射算法</p>
-<p><img src="/./../images/image-20250105152258659-1736866016801-56.png" alt="image20250105152258659"></p>
-<p><img src="/./../images/image-20250105152225324-1736866016802-67.png" alt="image20250105152225324"></p>
-<h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p><img src="/./../images/image-20250105153810405-1736866016801-57.png" alt="image20250105153810405"></p>
-<p><img src="/./../images/image-20250105153841004-1736866016801-58.png" alt="image20250105153841004"></p>
+<p><img src="/./../images/image-20250105152258659-1736866016801-56.png" alt="image20250105152258659"></p>
+<p><img src="/./../images/image-20250105152225324-1736866016802-67.png" alt="image20250105152225324"></p>
+<h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p><img src="/./../images/image-20250105153810405-1736866016801-57.png" alt="image20250105153810405"></p>
+<p><img src="/./../images/image-20250105153841004-1736866016801-58.png" alt="image20250105153841004"></p>
 <p><strong>TLD</strong>（<strong>Top-Level Domain</strong>）即 <strong>顶级域名</strong>，</p>
-<p><img src="/./../images/image-20250105154037490-1736866016801-59.png" alt="image20250105154037490"></p>
+<p><img src="/./../images/image-20250105154037490-1736866016801-59.png" alt="image20250105154037490"></p>
 <h2 id="P2P"><a href="#P2P" class="headerlink" title="P2P"></a>P2P</h2><p>使用模型：合作型- 用户通过简单的用户界面从他人处下载文件在下载过程中，BitTorrent 也会向其他人提供文件下载完成后，BitTorrent 会继续运行一小段时间3 个角色追踪器：记录哪个节点提供文件的哪些部分种子节点：拥有整个文件对等节点：下载完 100% 的文件后会变成种子节点</p>
-<p><img src="/./../images/image-20250105154640226-1736866016801-60.png" alt="image20250105154640226"></p>
+<p><img src="/./../images/image-20250105154640226-1736866016801-60.png" alt="image20250105154640226"></p>
 <p>发布者在 Web 服务器（例如 suprnova.org）上发布一个 .torrent 文件 - 包含追踪器的 URL、文件名、文件长度、数据块的 SHA1 值（64 - 512K 字节）追踪器组织一群对等节点（谁拥有哪个数据块？）</p>
 <p>发布者发布带有追踪器的 .torrent 文件的 URL 发布者必须拥有文件的完整副本</p>
 <p>对等节点向追踪器请求可从其下载的对等节点列表 -</p>
 <p>追踪器返回随机选择的对等节点列表</p>
-<p>对等节点相互联系以了解它们拥有文件的哪些部分等 从其他对等节点下载</p>
+<p>对等节点相互联系以了解它们拥有文件的哪些部分等 从其他对等节点下载</p>
 <p>rarest:稀有的</p>
-<p><img src="/./../images/image-20250105162328020-1736866016801-61.png" alt="image20250105162328020"></p>
-<h2 id="分布式hash-table-DHT"><a href="#分布式hash-table-DHT" class="headerlink" title="分布式hash table(DHT)"></a>分布式hash table(DHT)</h2><p><img src="/./../images/image-20250105162913860-1736866016801-62.png" alt="image20250105162913860"></p>
-<p><img src="/./../images/image-20250105163354894-1736866016801-63.png" alt="image20250105163354894"></p>
-<p><img src="/./../images/image-20250105165900718-1736866016801-64.png" alt="image20250105165900718"></p>
-<p><img src="/./../images/image-20250105170213571-1736866016802-65.png" alt="image20250105170213571"></p>
-<p><img src="/./../images/image-20250105170434895-1736866016802-66.png" alt="image20250105170434895"></p>
+<p><img src="/./../images/image-20250105162328020-1736866016801-61.png" alt="image20250105162328020"></p>
+<h2 id="分布式hash-table-DHT"><a href="#分布式hash-table-DHT" class="headerlink" title="分布式hash table(DHT)"></a>分布式hash table(DHT)</h2><p><img src="/./../images/image-20250105162913860-1736866016801-62.png" alt="image20250105162913860"></p>
+<p><img src="/./../images/image-20250105163354894-1736866016801-63.png" alt="image20250105163354894"></p>
+<p><img src="/./../images/image-20250105165900718-1736866016801-64.png" alt="image20250105165900718"></p>
+<p><img src="/./../images/image-20250105170213571-1736866016802-65.png" alt="image20250105170213571"></p>
+<p><img src="/./../images/image-20250105170434895-1736866016802-66.png" alt="image20250105170434895"></p>
 <h3 id="新加入节点处理"><a href="#新加入节点处理" class="headerlink" title="新加入节点处理"></a>新加入节点处理</h3><h3 id="1-Chord-协议简介"><a href="#1-Chord-协议简介" class="headerlink" title="1. Chord 协议简介"></a>1. <strong>Chord 协议简介</strong></h3><p>Chord 是一种分布式哈希表（DHT）协议，用于在分布式环境中高效地查找和存储数据。Chord 的设计目标是提供高效的查找机制，使得即使节点数量非常庞大，查找操作的时间复杂度仍然是对数级别的。Chord 主要用于解决 <strong>分布式键值存储</strong> 中的查找问题。</p>
 <h3 id="2-Chord-协议中的-ID"><a href="#2-Chord-协议中的-ID" class="headerlink" title="2. Chord 协议中的 ID"></a>2. <strong>Chord 协议中的 ID</strong></h3><p>在 Chord 协议中，每个节点和每个数据项（键）都有一个 <strong>唯一的标识符（ID）</strong>。这些 ID 是由哈希函数生成的，用于标识节点和数据项在哈希空间中的位置。</p>
 <h4 id="2-1-节点-ID"><a href="#2-1-节点-ID" class="headerlink" title="2.1 节点 ID"></a>2.1 <strong>节点 ID</strong></h4><p>每个参与 Chord 网络的节点都有一个唯一的标识符，通常是由节点的 IP 地址、端口号或其他信息通过一个哈希函数（如 MD5、SHA-1 等）生成的。生成的哈希值是一个数字，通常取值范围为 [0, 2^m-1]，其中 <code>m</code> 是哈希空间的位数。这个哈希值即为节点的 ID。</p>
@@ -1787,7 +1787,7 @@ kernel 在文件系统启动时读取s">
 </ul>
 <p>现在，如果一个数据项的键的 ID 是 4，Chord 协议会找到 ID 为 6 的节点，因为它是环中第一个 ID 大于或等于 4 的节点，并将该键与其对应的数据存储在节点 B 上。</p>
 <h3 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. <strong>总结</strong></h3><p>在 Chord 协议中，<strong>Chord ID</strong> 是节点和数据项在哈希空间中的唯一标识符。Chord 网络的核心思想是通过哈希函数将节点和数据项映射到一个环形哈希空间中，然后通过分布式路由和查找表实现高效的查找和数据存储。这个机制支持大规模分布式系统中节点的动态加入和退出，同时保证系统的高效性和容错能力。</p>
-<h1 id="distribute-compute"><a href="#distribute-compute" class="headerlink" title="distribute compute"></a>distribute compute</h1><p><img src="/./../images/image-20250105195829465-1736866016802-68.png" alt="image20250105195829465"></p>
+<h1 id="distribute-compute"><a href="#distribute-compute" class="headerlink" title="distribute compute"></a>distribute compute</h1><p><img src="/./../images/image-20250105195829465-1736866016802-68.png" alt="image20250105195829465"></p>
 <p><strong>Cache coherence 协议</strong>是多核或多处理器系统中，用来确保各处理器缓存中的数据一致性的一种机制。在多处理器系统中，每个处理器通常都有自己的缓存（L1、L2 等），这些缓存可能存储着相同的内存位置的不同副本。如果一个处理器修改了缓存中的数据，而其他处理器并不知道这个修改，就可能导致数据不一致的问题。</p>
 <p>为了解决这个问题，<strong>Cache一致性协议</strong>的目的是确保在并发访问共享内存时，各个处理器的缓存始终保持一致，避免因数据不一致而产生错误。Cache Coherence 协议的工作机制</p>
 <p>Cache Coherence 协议的核心是通过以下方式来保证数据一致性：</p>
@@ -1807,14 +1807,14 @@ kernel 在文件系统启动时读取s">
 <li><strong>缓存争用</strong>：多个处理器竞争缓存中的数据时，可能会导致频繁的缓存失效，影响性能。</li>
 <li><strong>串行化</strong>：为了维护一致性，某些情况下需要进行序列化操作，导致多核系统的并行性受限。</li>
 </ul>
-<p><img src="/./../images/image-20250105193402085-1736866016802-69.png" alt="image20250105193402085"></p>
+<p><img src="/./../images/image-20250105193402085-1736866016802-69.png" alt="image20250105193402085"></p>
 <p>为了提高并行计算，往cpu多塞几个ALU(SIMD: single instr,multi data)</p>
-<p><img src="/./../images/image-20250105194002124-1736866016802-70.png" alt="image20250105194002124"></p>
-<p><img src="/./../images/image-20250105194345653-1736866016802-71.png" alt="image20250105194345653"></p>
-<p><img src="/./../images/image-20250105194449651-1736866016802-72.png" alt="image20250105194449651"></p>
+<p><img src="/./../images/image-20250105194002124-1736866016802-70.png" alt="image20250105194002124"></p>
+<p><img src="/./../images/image-20250105194345653-1736866016802-71.png" alt="image20250105194345653"></p>
+<p><img src="/./../images/image-20250105194449651-1736866016802-72.png" alt="image20250105194449651"></p>
 <p>为什么不是8倍快：访存瓶颈（memory Access bottleneck）</p>
-<p><img src="/./../images/image-20250105194900282-1736866016802-74.png" alt="image20250105194900282"></p>
-<p><img src="/./../images/image-20250105195255141-1736866016802-73.png" alt="image20250105195255141"></p>
+<p><img src="/./../images/image-20250105194900282-1736866016802-74.png" alt="image20250105194900282"></p>
+<p><img src="/./../images/image-20250105195255141-1736866016802-73.png" alt="image20250105195255141"></p>
 <h3 id="roofline-model"><a href="#roofline-model" class="headerlink" title="roofline model"></a>roofline model</h3><p><strong>Roofline model</strong> 是一种可视化工具，用于评估和优化高性能计算（HPC）应用程序的性能，特别是在并行计算和加速器（如 GPU）环境中。它帮助开发者理解计算资源（如处理器计算能力、内存带宽等）如何影响应用程序的性能，并能够直观地识别瓶颈。</p>
 <h4 id="主要概念"><a href="#主要概念" class="headerlink" title="主要概念"></a>主要概念</h4><p>Roofline 模型结合了两个关键要素：</p>
 <ol>
@@ -1826,48 +1826,48 @@ kernel 在文件系统启动时读取s">
 <li><strong>X 轴</strong>：表示计算密集型任务的工作负载（通常以 FLOP&#x2F;s 表示）,</li>
 <li><strong>Y 轴</strong>：flops&#x2F;byte,表示每读一个byte能做多少次浮点操作（flops&#x2F;byte）</li>
 </ul>
-<p><img src="/./../images/image-20250105204957476-1736866016802-75.png" alt="image20250105204957476"></p>
-<p><img src="/./../images/image-20250105205757115-1736866016802-76.png" alt="image20250105205757115"></p>
-<p><img src="/./../images/image-20250105205923300-1736866016802-77.png" alt="image20250105205923300"></p>
+<p><img src="/./../images/image-20250105204957476-1736866016802-75.png" alt="image20250105204957476"></p>
+<p><img src="/./../images/image-20250105205757115-1736866016802-76.png" alt="image20250105205757115"></p>
+<p><img src="/./../images/image-20250105205923300-1736866016802-77.png" alt="image20250105205923300"></p>
 <p>也就是将计算添加掩码对应不同的分支，若不是正确的分支，则将结果丢弃</p>
-<p><img src="/./../images/image-20250105210113349-1736866016802-78.png" alt="image20250105210113349"></p>
+<p><img src="/./../images/image-20250105210113349-1736866016802-78.png" alt="image20250105210113349"></p>
 <p>掩码式单指令多数据（Masked SIMD）的缺点与单指令多线程（SIMT）的引入</p>
 <p>缺点：难以表达条件执行 —— 程序员无法直接调用简单的向量加法操作。</p>
 <p>单指令多线程（SIMT）：单指令多线程 —— 硬件供应商提供开发工具包以简化单指令多数据（SIMD）程序的开发。</p>
 <p>单指令多线程（SIMT）并非一种硬件实现方式，而是一种并行抽象 —— 程序员编写代码时基于一个抽象的单指令多线程模型。</p>
 <p>编译器会对底层的（有条件的）单指令多数据操作进行必要的转换（这超出了本课程的范围）。</p>
 <p>但开发人员仍需考虑硬件细节，以便充分利用该技术。</p>
-<p><img src="/./../images/image-20250105210330438-1736866016802-79.png" alt="image20250105210330438"></p>
-<p><img src="/./../images/image-20250105210741366-1736866016802-80.png" alt="image20250105210741366"></p>
-<p><img src="/./../images/image-20250105210922796-1736866016802-81.png" alt="image20250105210922796"></p>
-<p><img src="/./../images/image-20250105211612324-1736866016802-82.png" alt="image20250105211612324"></p>
-<h2 id="MAP-REDUCE"><a href="#MAP-REDUCE" class="headerlink" title="MAP REDUCE"></a>MAP REDUCE</h2><p><img src="/./../images/image-20250105213745392-1736866016802-83.png" alt="image20250105213745392"></p>
-<p><img src="/./../images/image-20250105214217211-1736866016802-84.png" alt="image20250105214217211"></p>
+<p><img src="/./../images/image-20250105210330438-1736866016802-79.png" alt="image20250105210330438"></p>
+<p><img src="/./../images/image-20250105210741366-1736866016802-80.png" alt="image20250105210741366"></p>
+<p><img src="/./../images/image-20250105210922796-1736866016802-81.png" alt="image20250105210922796"></p>
+<p><img src="/./../images/image-20250105211612324-1736866016802-82.png" alt="image20250105211612324"></p>
+<h2 id="MAP-REDUCE"><a href="#MAP-REDUCE" class="headerlink" title="MAP REDUCE"></a>MAP REDUCE</h2><p><img src="/./../images/image-20250105213745392-1736866016802-83.png" alt="image20250105213745392"></p>
+<p><img src="/./../images/image-20250105214217211-1736866016802-84.png" alt="image20250105214217211"></p>
 <p>具体流程见ppt</p>
-<p><img src="/./../images/image-20250105220258923-1736866016802-89.png" alt="image20250105220258923"></p>
-<p><img src="/./../images/image-20250105220315233-1736866016802-85.png" alt="image20250105220315233"></p>
-<p><img src="/./../images/image-20250105220437754-1736866016802-86.png" alt="image20250105220437754"></p>
-<p><img src="/./../images/image-20250105220850881-1736866016802-87.png" alt="image20250105220850881"></p>
-<h3 id="本地化优化"><a href="#本地化优化" class="headerlink" title="本地化优化"></a>本地化优化</h3><p>问题：（当时）数据中心网络的带宽很有限。如果 Map 工作节点从网络读取所有数据，速度会很慢。谷歌的做法：输入和输出文件都存储在谷歌文件系统（GFS）中。谷歌文件系统（发表于 SOSP’03 会议，详见之前的课程），每个数据块会在多台服务器（三台）上进行复制。MapReduce 在 GFS 数据块服务器上运行。将计算和存储放在一起。主节点会尝试将 Map 工作节点调度到拥有其所需输入数据块副本的节点之一上 。</p>
+<p><img src="/./../images/image-20250105220258923-1736866016802-89.png" alt="image20250105220258923"></p>
+<p><img src="/./../images/image-20250105220315233-1736866016802-85.png" alt="image20250105220315233"></p>
+<p><img src="/./../images/image-20250105220437754-1736866016802-86.png" alt="image20250105220437754"></p>
+<p><img src="/./../images/image-20250105220850881-1736866016802-87.png" alt="image20250105220850881"></p>
+<h3 id="本地化优化"><a href="#本地化优化" class="headerlink" title="本地化优化"></a>本地化优化</h3><p>问题：（当时）数据中心网络的带宽很有限。如果 Map 工作节点从网络读取所有数据，速度会很慢。谷歌的做法：输入和输出文件都存储在谷歌文件系统（GFS）中。谷歌文件系统（发表于 SOSP’03 会议，详见之前的课程），每个数据块会在多台服务器（三台）上进行复制。MapReduce 在 GFS 数据块服务器上运行。将计算和存储放在一起。主节点会尝试将 Map 工作节点调度到拥有其所需输入数据块副本的节点之一上 。</p>
 <p>有时一些worker会比其他worker明显的慢</p>
 <p>解决：让一个work交付给多个maper,只需要一个完成就可</p>
-<p><img src="/./../images/image-20250105221312073-1736866016802-88.png" alt="image20250105221312073"></p>
-<p><img src="/./../images/image-20250105221916481-1736866016802-90.png" alt="image20250105221916481"></p>
+<p><img src="/./../images/image-20250105221312073-1736866016802-88.png" alt="image20250105221312073"></p>
+<p><img src="/./../images/image-20250105221916481-1736866016802-90.png" alt="image20250105221916481"></p>
 <p>有的任务需要多次map_reduce,</p>
-<p><img src="/./../images/image-20250105222127157-1736866016802-91.png" alt="image20250105222127157"></p>
-<h3 id="dataflow-graph-有向无环图"><a href="#dataflow-graph-有向无环图" class="headerlink" title="dataflow graph(有向无环图)"></a>dataflow graph(有向无环图)</h3><p><img src="/./../images/image-20250105222518633-1736866016802-92.png" alt="image20250105222518633"></p>
-<p><img src="/./../images/image-20250105222630836-1736866016802-93.png" alt="image20250105222630836"></p>
-<p><img src="/./../images/image-20250105222748271-1736866016802-94.png" alt="image20250105222748271"></p>
-<h2 id="computing-graph"><a href="#computing-graph" class="headerlink" title="computing graph"></a>computing graph</h2><p><img src="/./../images/image-20250105223818705-1736866016802-95.png" alt="image20250105223818705"></p>
+<p><img src="/./../images/image-20250105222127157-1736866016802-91.png" alt="image20250105222127157"></p>
+<h3 id="dataflow-graph-有向无环图"><a href="#dataflow-graph-有向无环图" class="headerlink" title="dataflow graph(有向无环图)"></a>dataflow graph(有向无环图)</h3><p><img src="/./../images/image-20250105222518633-1736866016802-92.png" alt="image20250105222518633"></p>
+<p><img src="/./../images/image-20250105222630836-1736866016802-93.png" alt="image20250105222630836"></p>
+<p><img src="/./../images/image-20250105222748271-1736866016802-94.png" alt="image20250105222748271"></p>
+<h2 id="computing-graph"><a href="#computing-graph" class="headerlink" title="computing graph"></a>computing graph</h2><p><img src="/./../images/image-20250105223818705-1736866016802-95.png" alt="image20250105223818705"></p>
 <p>求自动梯度</p>
-<p><img src="/./../images/image-20250105224437345-1736866016802-96.png" alt="image20250105224437345"></p>
-<h2 id="distribute-training"><a href="#distribute-training" class="headerlink" title="distribute training"></a>distribute training</h2><p>如下图如何并行：<img src="/./../images/image-20250105225931866-1736866016802-97.png" alt="image20250105225931866"></p>
+<p><img src="/./../images/image-20250105224437345-1736866016802-96.png" alt="image20250105224437345"></p>
+<h2 id="distribute-training"><a href="#distribute-training" class="headerlink" title="distribute training"></a>distribute training</h2><p>如下图如何并行：<img src="/./../images/image-20250105225931866-1736866016802-97.png" alt="image20250105225931866"></p>
 <h3 id="data-parallelism"><a href="#data-parallelism" class="headerlink" title="data parallelism"></a>data parallelism</h3><p>将batch切开，而后分别执行再汇总</p>
 <p>缺点：需要每一个机器有完整的模型</p>
-<p><img src="/./../images/image-20250105230006962-1736866016802-98.png" alt="image20250105230006962"></p>
-<p><img src="/./../images/image-20250105230246007-1736866016802-99.png" alt="image20250105230246007"></p>
+<p><img src="/./../images/image-20250105230006962-1736866016802-98.png" alt="image20250105230006962"></p>
+<p><img src="/./../images/image-20250105230246007-1736866016802-99.png" alt="image20250105230246007"></p>
 <p>而后汇总（sum)</p>
-<p><img src="/./../images/image-20250105230306046-1736866016802-100.png" alt="image20250105230306046"></p>
+<p><img src="/./../images/image-20250105230306046-1736866016802-100.png" alt="image20250105230306046"></p>
 <p>汇总需要等待所有machine全都做完</p>
 <p>机器交换的数据很大</p>
 <p>如何把汇总加快？<strong>allreduce!</strong></p>
@@ -1891,27 +1891,27 @@ kernel 在文件系统启动时读取s">
 <li><strong>广播结果</strong>：将聚合后的结果广播回所有参与者，使得每个节点都可以获得相同的聚合结果。</li>
 </ol>
 <h4 id="常见的-AllReduce-算法"><a href="#常见的-AllReduce-算法" class="headerlink" title="常见的 AllReduce 算法"></a>常见的 AllReduce 算法</h4><p>实现 AllReduce 操作时，有几种常见的算法可以优化性能，特别是在大规模分布式环境中：</p>
-<p>0.parameter server(PS)<img src="/./../images/image-20250105231405117-1736866016802-101.png" alt="image20250105231405117"></p>
+<p>0.parameter server(PS)<img src="/./../images/image-20250105231405117-1736866016802-101.png" alt="image20250105231405117"></p>
 <ul>
 <li><p>缺点：</p>
 <ul>
 <li>带宽需求很大（跟机器数相关）</li>
-<li>并行流量很大<img src="/./../images/image-20250105231651338-1736866016802-102.png" alt="image20250105231651338"></li>
+<li>并行流量很大<img src="/./../images/image-20250105231651338-1736866016802-102.png" alt="image20250105231651338"></li>
 </ul>
 </li>
 </ul>
 <ol>
 <li><h3 id="Co-located-shared-PS"><a href="#Co-located-shared-PS" class="headerlink" title="Co-located&amp;shared PS"></a>Co-located&amp;shared PS</h3></li>
 </ol>
-<p>  将自己的数据拆分为n份,将对应的数据发给相应的机器各自处理，在返回给原来的机器<img src="/./../images/image-20250105232032534-1736866016802-103.png" alt="image20250105232032534"></p>
+<p>  将自己的数据拆分为n份,将对应的数据发给相应的机器各自处理，在返回给原来的机器<img src="/./../images/image-20250105232032534-1736866016802-103.png" alt="image20250105232032534"></p>
 <ul>
 <li>缺点：很大的fan-in(接收的输入端的数量很大)，流量爆炸</li>
 </ul>
-<p>  <img src="/./../images/image-20250105232507355-1736866016802-104.png" alt="image20250105232507355"></p>
+<p>  <img src="/./../images/image-20250105232507355-1736866016802-104.png" alt="image20250105232507355"></p>
 <ul>
 <li>解决：一个一个的发</li>
-<li><img src="/./../images/image-20250105235637070-1736866016802-105.png" alt="image20250105235637070"><ul>
-<li>改进：并行<img src="/./../images/image-20250105235758396-1736866016802-106.png" alt="image20250105235758396"></li>
+<li><img src="/./../images/image-20250105235637070-1736866016802-105.png" alt="image20250105235637070"><ul>
+<li>改进：并行<img src="/./../images/image-20250105235758396-1736866016802-106.png" alt="image20250105235758396"></li>
 <li>缺点：通信开销，需要维护大量connection</li>
 </ul>
 </li>
@@ -1920,12 +1920,12 @@ kernel 在文件系统启动时读取s">
 <li><strong>环形算法（Ring AllReduce）</strong>：</li>
 </ol>
 <ul>
-<li><p>在环形算法中，所有节点连接成一个环，每个节点将自己的数据传递给下一个节点，直到所有节点的数据被聚合。每个节点接收到来自其他节点的数据并进行聚合操作。该算法的优点是通信开销较小，适用于大规模分布式训练。<img src="/./../images/image-20250106001511448-1736866016802-107.png" alt="image20250106001511448"></p>
+<li><p>在环形算法中，所有节点连接成一个环，每个节点将自己的数据传递给下一个节点，直到所有节点的数据被聚合。每个节点接收到来自其他节点的数据并进行聚合操作。该算法的优点是通信开销较小，适用于大规模分布式训练。<img src="/./../images/image-20250106001511448-1736866016802-107.png" alt="image20250106001511448"></p>
 </li>
 <li><p>而后将结果广播给其他机器</p>
 </li>
 </ul>
-<p><img src="/./../images/image-20250106001657507-1736866016802-108.png" alt="image20250106001657507"></p>
+<p><img src="/./../images/image-20250106001657507-1736866016802-108.png" alt="image20250106001657507"></p>
 <ul>
 <li>注意：此时结果的顺序不同：0123，1230，2301，3012</li>
 <li>浮点数不满足交换律，可能会有trikiy</li>
@@ -1934,7 +1934,7 @@ kernel 在文件系统启动时读取s">
 <ul>
 <li><p>树形算法通过构建一棵树来进行数据的合并操作。在该算法中，节点会将数据发送到父节点，父节点再将数据传递给祖父节点，直到根节点汇总所有数据并将结果广播给所有节点。树形算法通常具有较好的扩展性，但可能导致较高的通信延迟。</p>
 </li>
-<li><p><img src="/./../images/image-20250106002253913-1736866016802-109.png" alt="image20250106002253913"></p>
+<li><p><img src="/./../images/image-20250106002253913-1736866016802-109.png" alt="image20250106002253913"></p>
 <ul>
 <li>两个树：将数据分为两半给两个树（节点在一棵树做根，另一个做叶子），提高节点的load balance</li>
 </ul>
@@ -1945,75 +1945,75 @@ kernel 在文件系统启动时读取s">
 <li><strong>延迟优化</strong>：在某些情况下，网络延迟可能成为瓶颈。通过优化通信协议、使用更高效的硬件或选择合适的 AllReduce 算法，可以减少通信延迟。</li>
 <li><strong>异步 AllReduce</strong>：一些高级实现使用异步通信来避免等待通信操作的完成，从而提高整体效率，但这种方法可能会增加同步的复杂性。</li>
 </ul>
-<p><img src="/./../images/image-20250106002752077-1736866016802-110.png" alt="image20250106002752077"></p>
-<h3 id="model-parallelism"><a href="#model-parallelism" class="headerlink" title="model parallelism"></a>model parallelism</h3><p><img src="/./../images/image-20250105230111008-1736866016802-111.png" alt="image20250105230111008"></p>
-<p><img src="/./../images/image-20250106092528854-1736866016802-112.png" alt="image20250106092528854"></p>
-<p><img src="/./../images/image-20250106092659001-1736866016802-113.png" alt="image20250106092659001"></p>
+<p><img src="/./../images/image-20250106002752077-1736866016802-110.png" alt="image20250106002752077"></p>
+<h3 id="model-parallelism"><a href="#model-parallelism" class="headerlink" title="model parallelism"></a>model parallelism</h3><p><img src="/./../images/image-20250105230111008-1736866016802-111.png" alt="image20250105230111008"></p>
+<p><img src="/./../images/image-20250106092528854-1736866016802-112.png" alt="image20250106092528854"></p>
+<p><img src="/./../images/image-20250106092659001-1736866016802-113.png" alt="image20250106092659001"></p>
 <ul>
-<li>优化：<img src="/./../images/image-20250106094025570-1736866016802-114.png" alt="image20250106094025570"></li>
+<li>优化：<img src="/./../images/image-20250106094025570-1736866016802-114.png" alt="image20250106094025570"></li>
 </ul>
-<p><img src="/./../images/image-20250106094051506-1736866016802-115.png" alt="image20250106094051506"></p>
+<p><img src="/./../images/image-20250106094051506-1736866016802-115.png" alt="image20250106094051506"></p>
 <p>如何优化：增大m，减少p,都不够实际（改m会影响batch，p也不能减少，否则机器存不下）</p>
-<h3 id="tensor-parallelism"><a href="#tensor-parallelism" class="headerlink" title="tensor parallelism"></a>tensor parallelism</h3><p>分块矩阵乘法<img src="/./../images/image-20250106094748291-1736866016802-116.png" alt="image20250106094748291"></p>
+<h3 id="tensor-parallelism"><a href="#tensor-parallelism" class="headerlink" title="tensor parallelism"></a>tensor parallelism</h3><p>分块矩阵乘法<img src="/./../images/image-20250106094748291-1736866016802-116.png" alt="image20250106094748291"></p>
 <p>x如何汇总到y:</p>
 <p>需要全收集通信，以便所有进程相互获得激活数据</p>
 <p>假设使用简单的转发，每个节点需要发送di × B</p>
-<p><img src="/./../images/image-20250106094909448-1736866016802-117.png" alt="image20250106094909448"></p>
-<p><img src="/./../images/image-20250106095205608-1736866016802-118.png" alt="image20250106095205608"></p>
-<p><img src="/./../images/image-20250106095822632-1736866016802-119.png" alt="image20250106095822632"></p>
-<p><img src="/./../images/image-20250106100101852-1736866016802-120.png" alt="image20250106100101852"></p>
-<h3 id="同步和异步："><a href="#同步和异步：" class="headerlink" title="同步和异步："></a>同步和异步：</h3><p><img src="/./../images/image-20250106100227003-1736866016802-121.png" alt="image20250106100227003"></p>
-<p><img src="/./../images/image-20250106100308841-1736866016802-122.png" alt="image20250106100308841"></p>
-<p><img src="/./../images/image-20250106100210895-1736866016802-123.png" alt="image20250106100210895"></p>
-<h1 id="System-security"><a href="#System-security" class="headerlink" title="System security"></a>System security</h1><p><img src="/./../images/image-20250106124257736-1736866016802-124.png" alt="image20250106124257736"></p>
-<h2 id="CIA-保密性，完整性，可用性"><a href="#CIA-保密性，完整性，可用性" class="headerlink" title="CIA:保密性，完整性，可用性"></a>CIA:保密性，完整性，可用性</h2><p><img src="/./../images/image-20250106124512710-1736866016802-125.png" alt="image20250106124512710"></p>
+<p><img src="/./../images/image-20250106094909448-1736866016802-117.png" alt="image20250106094909448"></p>
+<p><img src="/./../images/image-20250106095205608-1736866016802-118.png" alt="image20250106095205608"></p>
+<p><img src="/./../images/image-20250106095822632-1736866016802-119.png" alt="image20250106095822632"></p>
+<p><img src="/./../images/image-20250106100101852-1736866016802-120.png" alt="image20250106100101852"></p>
+<h3 id="同步和异步："><a href="#同步和异步：" class="headerlink" title="同步和异步："></a>同步和异步：</h3><p><img src="/./../images/image-20250106100227003-1736866016802-121.png" alt="image20250106100227003"></p>
+<p><img src="/./../images/image-20250106100308841-1736866016802-122.png" alt="image20250106100308841"></p>
+<p><img src="/./../images/image-20250106100210895-1736866016802-123.png" alt="image20250106100210895"></p>
+<h1 id="System-security"><a href="#System-security" class="headerlink" title="System security"></a>System security</h1><p><img src="/./../images/image-20250106124257736-1736866016802-124.png" alt="image20250106124257736"></p>
+<h2 id="CIA-保密性，完整性，可用性"><a href="#CIA-保密性，完整性，可用性" class="headerlink" title="CIA:保密性，完整性，可用性"></a>CIA:保密性，完整性，可用性</h2><p><img src="/./../images/image-20250106124512710-1736866016802-125.png" alt="image20250106124512710"></p>
 <h4 id="threat-model-assumption"><a href="#threat-model-assumption" class="headerlink" title="threat model:assumption"></a>threat model:assumption</h4><p>即假设攻击者具有的手段</p>
-<p><img src="/./../images/image-20250106125012568-1736866016802-126.png" alt="image20250106125012568"></p>
-<h2 id="session-cookie"><a href="#session-cookie" class="headerlink" title="session cookie"></a>session cookie</h2><p><img src="/./../images/image-20250106130947579-1736866016802-127.png" alt="image20250106130947579"></p>
-<p><img src="/./../images/image-20250106131015452-1736866016802-128.png" alt="image20250106131015452"></p>
+<p><img src="/./../images/image-20250106125012568-1736866016802-126.png" alt="image20250106125012568"></p>
+<h2 id="session-cookie"><a href="#session-cookie" class="headerlink" title="session cookie"></a>session cookie</h2><p><img src="/./../images/image-20250106130947579-1736866016802-127.png" alt="image20250106130947579"></p>
+<p><img src="/./../images/image-20250106131015452-1736866016802-128.png" alt="image20250106131015452"></p>
 <p>原则：当涉及到安全性时，要明确和没有二义性</p>
 <p>例如，使用可逆分隔符方案将多个部分散列在一起</p>
-<p><img src="/./../images/image-20250106131100620-1736866016802-129.png" alt="image20250106131100620"></p>
-<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><ul>
-<li></li>
-<li>反向验证服务器是否是假的<img src="/./../images/image-20250106131738743-1736866016803-130.png" alt="image20250106131738743"></li>
-</ul>
-<p><img src="/./../images/image-20250106132105813-1736866016803-131.png" alt="image20250106132105813"></p>
+<p><img src="/./../images/image-20250106131100620-1736866016802-129.png" alt="image20250106131100620"></p>
+<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>* </p>
 <ul>
-<li><img src="/./../images/image-20250106133613658-1736866016803-132.png" alt="image20250106133613658"></li>
-<li><img src="/./../images/image-20250106133636877-1736866016803-133.png" alt="image20250106133636877"></li>
-<li><img src="/./../images/image-20250106133652825-1736866016803-134.png" alt="image20250106133652825"></li>
-<li><img src="/./../images/image-20250106133435523-1736866016803-135.png" alt="image20250106133435523"></li>
+<li>反向验证服务器是否是假的<img src="/./../images/image-20250106131738743-1736866016803-130.png" alt="image20250106131738743"></li>
+</ul>
+<p><img src="/./../images/image-20250106132105813-1736866016803-131.png" alt="image20250106132105813"></p>
+<ul>
+<li><img src="/./../images/image-20250106133613658-1736866016803-132.png" alt="image20250106133613658"></li>
+<li><img src="/./../images/image-20250106133636877-1736866016803-133.png" alt="image20250106133636877"></li>
+<li><img src="/./../images/image-20250106133652825-1736866016803-134.png" alt="image20250106133652825"></li>
+<li><img src="/./../images/image-20250106133435523-1736866016803-135.png" alt="image20250106133435523"></li>
 <li>执行重要操作时再次验证</li>
-<li><img src="/./../images/image-20250106133708504-1736866016803-136.png" alt="image20250106133708504"></li>
-<li><img src="/./../images/image-20250106133325320-1736866016803-137.png" alt="image20250106133325320"></li>
+<li><img src="/./../images/image-20250106133708504-1736866016803-136.png" alt="image20250106133708504"></li>
+<li><img src="/./../images/image-20250106133325320-1736866016803-137.png" alt="image20250106133325320"></li>
 </ul>
 <h2 id="ROP"><a href="#ROP" class="headerlink" title="ROP"></a>ROP</h2><p><strong>ROP攻击（Return-Oriented Programming）</strong> 是一种利用程序中已有的代码片段（称为“gadgets”）进行恶意操作的攻击技术。它属于一种<strong>控制流劫持</strong>攻击方式，广泛应用于利用堆栈溢出或缓冲区溢出漏洞，绕过数据执行保护（DEP, Data Execution Prevention）和地址空间布局随机化（ASLR, Address Space Layout Randomization）等安全防护机制。</p>
 <p>防御措施：</p>
-<p><img src="/./../images/image-20250106135334398-1736866016803-138.png" alt="image20250106135334398"></p>
-<p><img src="/./../images/image-20250106135359313-1736866016803-139.png" alt="image20250106135359313"></p>
-<p>金丝雀：不能被修改，否则表示被攻击<img src="/./../images/image-20250106135449463-1736866016803-140.png" alt="image20250106135449463"></p>
+<p><img src="/./../images/image-20250106135334398-1736866016803-138.png" alt="image20250106135334398"></p>
+<p><img src="/./../images/image-20250106135359313-1736866016803-139.png" alt="image20250106135359313"></p>
+<p>金丝雀：不能被修改，否则表示被攻击<img src="/./../images/image-20250106135449463-1736866016803-140.png" alt="image20250106135449463"></p>
 <h2 id="CFI"><a href="#CFI" class="headerlink" title="CFI"></a>CFI</h2><p><strong>CFI（Control Flow Integrity，控制流完整性）</strong> 是一种防止控制流劫持攻击（如 ROP、JOP 和其他类型的代码注入攻击）的安全技术。控制流劫持攻击通常通过改变程序的执行路径来使其执行攻击者指定的恶意代码，CFI 旨在确保程序的控制流始终遵循合法的路径，从而防止这类攻击。</p>
 <p>在binary里面加入控制流信息，防止代码jump到未知位置</p>
-<p><img src="/./../images/image-20250106140151749-1736866016803-141.png" alt="image20250106140151749"></p>
+<p><img src="/./../images/image-20250106140151749-1736866016803-141.png" alt="image20250106140151749"></p>
 <p>实践如下：</p>
-<p><img src="/./../images/image-20250106140401269-1736866016803-142.png" alt="image20250106140401269"></p>
+<p><img src="/./../images/image-20250106140401269-1736866016803-142.png" alt="image20250106140401269"></p>
 <p>缺点：若作为库链接到应用程序，应用程序跳转到该位置会报错</p>
-<p>改进：prefetchnra<img src="/./../images/image-20250106140730346-1736866016803-143.png" alt="image20250106140730346"></p>
+<p>改进：prefetchnra<img src="/./../images/image-20250106140730346-1736866016803-143.png" alt="image20250106140730346"></p>
 <p>缺点：如下，由于cd的值相等，使得不能调d的a也可以调d，破坏了控制图</p>
-<p><img src="/./../images/image-20250106141203234-1736866016803-144.png" alt="image20250106141203234"></p>
-<p><img src="/./../images/image-20250106141444655-1736866016803-145.png" alt="image20250106141444655"></p>
+<p><img src="/./../images/image-20250106141203234-1736866016803-144.png" alt="image20250106141203234"></p>
+<p><img src="/./../images/image-20250106141444655-1736866016803-145.png" alt="image20250106141444655"></p>
 <p>改进：保证标签唯一，但难以实现</p>
-<p><img src="/./../images/image-20250106141832360-1736866016803-146.png" alt="image20250106141832360"></p>
+<p><img src="/./../images/image-20250106141832360-1736866016803-146.png" alt="image20250106141832360"></p>
 <p>不要太相信其他人写的代码：</p>
-<p><img src="/./../images/image-20250106141920274-1736866016803-147.png" alt="image20250106141920274"></p>
+<p><img src="/./../images/image-20250106141920274-1736866016803-147.png" alt="image20250106141920274"></p>
 <h3 id="BLIND-ROP"><a href="#BLIND-ROP" class="headerlink" title="BLIND ROP"></a>BLIND ROP</h3><p><strong>Blind ROP (Blind Return-Oriented Programming)</strong> 是一种控制流劫持攻击技术，属于 ROP（Return-Oriented Programming，返回导向编程）的变种。与传统的 ROP 攻击不同，Blind ROP 不需要攻击者直接知道程序中函数的具体地址或代码内容，而是通过其他方式获取所需的控制流信息。这使得 Blind ROP 能绕过一些防护机制，特别是那些依赖于静态分析或程序地址信息的安全防护措施。</p>
 <ul>
-<li>试探出指令位置：<img src="/./../images/image-20250106145218672-1736866016803-148.png" alt="image20250106145218672"><ul>
+<li>试探出指令位置：<img src="/./../images/image-20250106145218672-1736866016803-148.png" alt="image20250106145218672"><ul>
 <li>为什么随机地址空间不可靠：子进程fork父进程，不会改变地址位置</li>
 <li>多次尝试，找到可用的代码片段<ul>
-<li><img src="/./../images/image-20250106145515432-1736866016803-149.png" alt="image20250106145515432"></li>
-<li><img src="/./../images/image-20250106145552245-1736866016803-150.png" alt="image20250106145552245"></li>
+<li><img src="/./../images/image-20250106145515432-1736866016803-149.png" alt="image20250106145515432"></li>
+<li><img src="/./../images/image-20250106145552245-1736866016803-150.png" alt="image20250106145552245"></li>
 </ul>
 </li>
 </ul>
@@ -2022,7 +2022,7 @@ kernel 在文件系统启动时读取s">
 <h2 id="data-flow-protection"><a href="#data-flow-protection" class="headerlink" title="data flow protection"></a>data flow protection</h2><h4 id="data-flow-tracking-数据流轨迹"><a href="#data-flow-tracking-数据流轨迹" class="headerlink" title="data flow tracking(数据流轨迹)"></a>data flow tracking(数据流轨迹)</h4><p>usage</p>
 <h3 id="protect-critical-data"><a href="#protect-critical-data" class="headerlink" title="protect critical data"></a>protect critical data</h3><h4 id="taint-染色-tracking"><a href="#taint-染色-tracking" class="headerlink" title="taint(染色) tracking"></a>taint(染色) tracking</h4><p>taint一般存内存内</p>
 <p>跟踪被输入数据影响的数据</p>
-<p><img src="/./../images/image-20250106160925150-1736866016803-151.png" alt="image20250106160925150"></p>
+<p><img src="/./../images/image-20250106160925150-1736866016803-151.png" alt="image20250106160925150"></p>
 <p>在运行时追踪数据的taint</p>
 <p>最后的jmp l有问题：jmp到一个data，表明可能被攻击者攻击</p>
 <ul>
@@ -2034,7 +2034,7 @@ kernel 在文件系统启动时读取s">
 </li>
 </ul>
 <p>taint清除：以下函数等小于（b&#x3D;a),但会使得b不被taint</p>
-<p><img src="/./../images/image-20250106202529208-1736866016803-152.png" alt="image20250106202529208"></p>
+<p><img src="/./../images/image-20250106202529208-1736866016803-152.png" alt="image20250106202529208"></p>
 <h4 id="TaintDroid-的主要功能"><a href="#TaintDroid-的主要功能" class="headerlink" title=". TaintDroid 的主要功能"></a>. <strong>TaintDroid 的主要功能</strong></h4><p>TaintDroid 是一个 <strong>动态污点分析工具</strong>，它主要通过以下方式进行工作：</p>
 <h5 id="1-污点数据标记和传播追踪"><a href="#1-污点数据标记和传播追踪" class="headerlink" title="1. 污点数据标记和传播追踪"></a><strong>1. 污点数据标记和传播追踪</strong></h5><ul>
 <li><strong>污点数据</strong>：在 TaintDroid 中，敏感数据（如 GPS 位置信息、电话号码、联系人数据等）被视为“污点”。当应用程序访问这些数据时，TaintDroid 会将其标记为污点，并追踪它们在程序执行过程中如何传播到其他地方。</li>
@@ -2048,21 +2048,21 @@ kernel 在文件系统启动时读取s">
 <li><strong>报告和警告</strong>：当 TaintDroid 发现污点数据被不当地传输或泄露时，会生成详细的报告，帮助开发人员和安全专家定位问题。</li>
 </ul>
 <p>propagation:传播</p>
-<p><img src="/./../images/image-20250106162120326-1736866016803-153.png" alt="image20250106162120326"></p>
-<h3 id="defend-against-suspicious-input-data"><a href="#defend-against-suspicious-input-data" class="headerlink" title="defend against suspicious input data"></a>defend against suspicious input data</h3><p><img src="/./../images/image-20250106163135439-1736866016803-154.png" alt="image20250106163135439"></p>
-<p><img src="/./../images/image-20250106163059412-1736866016803-155.png" alt="image20250106163059412"></p>
+<p><img src="/./../images/image-20250106162120326-1736866016803-153.png" alt="image20250106162120326"></p>
+<h3 id="defend-against-suspicious-input-data"><a href="#defend-against-suspicious-input-data" class="headerlink" title="defend against suspicious input data"></a>defend against suspicious input data</h3><p><img src="/./../images/image-20250106163135439-1736866016803-154.png" alt="image20250106163135439"></p>
+<p><img src="/./../images/image-20250106163059412-1736866016803-155.png" alt="image20250106163059412"></p>
 <p>可以：</p>
-<p><img src="/./../images/image-20250106163208665-1736866016803-156.png" alt="image20250106163208665"></p>
-<p><img src="/./../images/image-20250106163215621-1736866016803-157.png" alt="image20250106163215621"></p>
+<p><img src="/./../images/image-20250106163208665-1736866016803-156.png" alt="image20250106163208665"></p>
+<p><img src="/./../images/image-20250106163215621-1736866016803-157.png" alt="image20250106163215621"></p>
 <p>缺点：开销（overhead）很大</p>
-<h2 id="secure-channel"><a href="#secure-channel" class="headerlink" title="secure channel"></a>secure channel</h2><p><img src="/./../images/image-20250106172143608-1736866016803-158.png" alt="image20250106172143608"><img src="/./../images/image-20250106172226286-1736866016803-159.png" alt="image20250106172226286"></p>
-<p><img src="/./../images/image-20250106172302565-1736866016803-160.png" alt="image20250106172302565"></p>
-<p>解决：添加一个每次改变的seq:<img src="/./../images/image-20250106172423295-1736866016803-161.png" alt="image20250106172423295"></p>
+<h2 id="secure-channel"><a href="#secure-channel" class="headerlink" title="secure channel"></a>secure channel</h2><p><img src="/./../images/image-20250106172143608-1736866016803-158.png" alt="image20250106172143608"><img src="/./../images/image-20250106172226286-1736866016803-159.png" alt="image20250106172226286"></p>
+<p><img src="/./../images/image-20250106172302565-1736866016803-160.png" alt="image20250106172302565"></p>
+<p>解决：添加一个每次改变的seq:<img src="/./../images/image-20250106172423295-1736866016803-161.png" alt="image20250106172423295"></p>
 <p>问题：</p>
-<p><img src="/./../images/image-20250106172559305-1736866016803-162.png" alt="image20250106172559305"></p>
-<p>解决：每个有各自的key<img src="/./../images/image-20250106172703588-1736866016803-163.png" alt="image20250106172703588"></p>
-<p><img src="/./../images/image-20250106172901299-1736866016803-164.png" alt="image20250106172901299"></p>
-<p><img src="/./../images/image-20250106173040884-1736866016803-165.png" alt="image20250106173040884"></p>
+<p><img src="/./../images/image-20250106172559305-1736866016803-162.png" alt="image20250106172559305"></p>
+<p>解决：每个有各自的key<img src="/./../images/image-20250106172703588-1736866016803-163.png" alt="image20250106172703588"></p>
+<p><img src="/./../images/image-20250106172901299-1736866016803-164.png" alt="image20250106172901299"></p>
+<p><img src="/./../images/image-20250106173040884-1736866016803-165.png" alt="image20250106173040884"></p>
 <h3 id="RSA-算法"><a href="#RSA-算法" class="headerlink" title="RSA 算法"></a>RSA 算法</h3><p>公钥分发</p>
 <p>1.爱丽丝记得她上次用的钥匙</p>
 <p>易于实现</p>
@@ -2071,17 +2071,17 @@ kernel 在文件系统启动时读取s">
 <p>3.权威，但预先计算响应</p>
 <p>-授权机构创建签名消息：{Bob， PK Bob} {SK as]-任何人都可以验证授权机构签署了这条消息，给定PK as。当Alice想要与Bob交谈时，她需要来自授权机构的签名消息，但只要签名签出，这条消息来自哪里并不重要。， Alice可以从另一个服务器检索消息——这个签名的消息是一个证书</p>
 <p>更加可伸缩</p>
-<p><img src="/./../images/image-20250106191417572-1736866016803-166.png" alt="image20250106191417572"></p>
-<p><img src="/./../images/image-20250106192218341-1736866016803-167.png" alt="image20250106191623600"></p>
-<h2 id="privacy"><a href="#privacy" class="headerlink" title="privacy"></a>privacy</h2><h3 id="OT-oblivious-transfer-不经意传输"><a href="#OT-oblivious-transfer-不经意传输" class="headerlink" title="OT(oblivious transfer)不经意传输"></a>OT(oblivious transfer)不经意传输</h3><p><img src="/./../images/image-20250106193237601-1736866016803-168.png" alt="image20250106193237601"><img src="/./../images/image-20250106193413015-1736866016803-169.png" alt="image20250106193413015"></p>
-<p><img src="/./../images/image-20250106193521496-1736866016803-170.png" alt="image20250106193521496"></p>
+<p><img src="/./../images/image-20250106191417572-1736866016803-166.png" alt="image20250106191417572"></p>
+<p><img src="/./../images/image-20250106192218341-1736866016803-167.png" alt="image20250106191623600"></p>
+<h2 id="privacy"><a href="#privacy" class="headerlink" title="privacy"></a>privacy</h2><h3 id="OT-oblivious-transfer-不经意传输"><a href="#OT-oblivious-transfer-不经意传输" class="headerlink" title="OT(oblivious transfer)不经意传输"></a>OT(oblivious transfer)不经意传输</h3><p><img src="/./../images/image-20250106193237601-1736866016803-168.png" alt="image20250106193237601"><img src="/./../images/image-20250106193413015-1736866016803-169.png" alt="image20250106193413015"></p>
+<p><img src="/./../images/image-20250106193521496-1736866016803-170.png" alt="image20250106193521496"></p>
 <h3 id="DP（differential-privacy"><a href="#DP（differential-privacy" class="headerlink" title="DP（differential privacy)"></a>DP（differential privacy)</h3><p>给予模糊值</p>
 <p>会导致精度下降</p>
-<p><img src="/./../images/image-20250106194338168-1736866016803-171.png" alt="image20250106194338168"></p>
+<p><img src="/./../images/image-20250106194338168-1736866016803-171.png" alt="image20250106194338168"></p>
 <h3 id="secret-sharing"><a href="#secret-sharing" class="headerlink" title="secret sharing"></a>secret sharing</h3><p>将密码分发给n个人，至少需要k个人才能解锁</p>
-<p><img src="/./../images/image-20250106194713522-1736866016803-172.png" alt="image20250106194713522"></p>
+<p><img src="/./../images/image-20250106194713522-1736866016803-172.png" alt="image20250106194713522"></p>
 <p>优点和缺点</p>
-<p><img src="/./../images/image-20250106194850959-1736866016803-173.png" alt="image20250106194850959"></p>
+<p><img src="/./../images/image-20250106194850959-1736866016803-173.png" alt="image20250106194850959"></p>
 <h3 id="HE-homomorphic-encryption-同态加密"><a href="#HE-homomorphic-encryption-同态加密" class="headerlink" title="HE(homomorphic encryption)同态加密"></a>HE(homomorphic encryption)同态加密</h3><p><strong>同态加密（Homomorphic Encryption，HE）</strong> 是一种加密方式，它允许对加密数据执行特定的计算操作，而无需解密数据。换句话说，数据在加密后仍然可以被处理、计算、甚至执行复杂的操作，而最终结果解密后与直接对原始数据操作的结果是一样的。它解决了隐私保护与数据处理之间的矛盾，使得在不暴露数据的情况下，也能对其进行处理和分析。</p>
 <p>同态加密的一个典型应用场景是 <strong>云计算</strong>，特别是 <strong>隐私保护计算</strong>。用户可以将加密数据发送到云端，由云服务提供商执行计算任务，而无需担心数据隐私泄露。只有拥有密钥的用户才能解密结果。</p>
 <h5 id="1-同态加密的工作原理"><a href="#1-同态加密的工作原理" class="headerlink" title="1. 同态加密的工作原理"></a>1. <strong>同态加密的工作原理</strong></h5><p>同态加密的核心思想是：允许在加密数据上执行一些操作（如加法、乘法等），而无需解密数据。加密的数据在计算过程中保持加密状态，只有当计算完成并返回结果时，才能解密并获得正确的结果。</p>
@@ -2091,19 +2091,19 @@ kernel 在文件系统启动时读取s">
 <li><strong>乘法同态性</strong>：允许对加密数据执行乘法运算。</li>
 <li><strong>全同态加密</strong>（Fully Homomorphic Encryption，FHE）：一种高级形式，允许在加密数据上执行任意类型的计算（包括加法和乘法），这使得它在计算复杂任务时非常强大。</li>
 </ul>
-<p><img src="/./../images/image-20250106195519271-1736866016803-174.png" alt="image20250106195519271"></p>
+<p><img src="/./../images/image-20250106195519271-1736866016803-174.png" alt="image20250106195519271"></p>
 <h3 id="TEE-trusted-execution-environment-可信执行环境"><a href="#TEE-trusted-execution-environment-可信执行环境" class="headerlink" title="TEE(trusted execution environment)可信执行环境"></a>TEE(trusted execution environment)可信执行环境</h3><p>将内存的内容加密，在cache层再解密</p>
 <p>很难窃取数据</p>
 <p>需要相信处理器厂商（intel….)</p>
-<p><img src="/./../images/image-20250106200543025-1736866016803-175.png" alt="image20250106200543025"></p>
-<p><img src="/./../images/image-20250106201027151-1736866016803-176.png" alt="image20250106201027151"></p>
-<h3 id="process-of-Bug-report"><a href="#process-of-Bug-report" class="headerlink" title="process of Bug report"></a>process of Bug report</h3><p><img src="/./../images/image-20250106201544891-1736866016803-177.png" alt="image20250106201544891"></p>
-<p><img src="/./../images/image-20250106201609003-1736866016803-179.png" alt="image20250106201609003"></p>
-<p><img src="/./../images/image-20250106201655733-1736866016803-178.png" alt="image20250106201655733"></p>
-<p><img src="/./../images/image-20250106201714082-1736866016803-181.png" alt="image20250106201714082"></p>
-<p><img src="/./../images/image-20250106201728603-1736866016803-180.png" alt="image20250106201728603"></p>
-<p><img src="/./../images/image-20250106201748650-1736866016804-182.png" alt="image20250106201748650"></p>
-<p><img src="/./../images/image-20250106201840774-1736866016804-183.png" alt="image20250106201840774"></p>
+<p><img src="/./../images/image-20250106200543025-1736866016803-175.png" alt="image20250106200543025"></p>
+<p><img src="/./../images/image-20250106201027151-1736866016803-176.png" alt="image20250106201027151"></p>
+<h3 id="process-of-Bug-report"><a href="#process-of-Bug-report" class="headerlink" title="process of Bug report"></a>process of Bug report</h3><p><img src="/./../images/image-20250106201544891-1736866016803-177.png" alt="image20250106201544891"></p>
+<p><img src="/./../images/image-20250106201609003-1736866016803-179.png" alt="image20250106201609003"></p>
+<p><img src="/./../images/image-20250106201655733-1736866016803-178.png" alt="image20250106201655733"></p>
+<p><img src="/./../images/image-20250106201714082-1736866016803-181.png" alt="image20250106201714082"></p>
+<p><img src="/./../images/image-20250106201728603-1736866016803-180.png" alt="image20250106201728603"></p>
+<p><img src="/./../images/image-20250106201748650-1736866016804-182.png" alt="image20250106201748650"></p>
+<p><img src="/./../images/image-20250106201840774-1736866016804-183.png" alt="image20250106201840774"></p>
 <p>复习内容：</p>
 <p>network:Manchester Code,海明编码</p>
 
